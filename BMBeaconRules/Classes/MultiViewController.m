@@ -7,9 +7,11 @@
 //
 
 #import "MultiViewController.h"
+#import "BMBeaconRules.h"
+#import "RemoteOccupancyRule.h"
 
 @interface MultiViewController ()
-
+@property (strong) BMBeaconRuleManager *manager;
 @end
 
 @implementation MultiViewController
@@ -26,6 +28,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.manager = [[BMBeaconRuleManager alloc] init];
+    
+    RemoteOccupancyRule *rule = [[RemoteOccupancyRule alloc] initWithRegion:kEstimoteBeaconRegion activationProximity:CLProximityImmediate andCallback:^(BMBeaconRule *rule, BOOL activated) {
+        if (activated) {
+            NSLog(@"%@: ACTIVATED REMOTE OCCUPANCY RULE!", [UIDevice currentDevice].name);
+        } else {
+            NSLog(@"%@: DEACTIVATED REMOTE OCCUPANCY RULE!", [UIDevice currentDevice].name);
+        }
+    }];
+    
+    [self.manager addRule:rule];
 	// Do any additional setup after loading the view.
 }
 

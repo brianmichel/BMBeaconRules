@@ -1,10 +1,16 @@
 PODS:
   - FlatUIKit (1.2)
+  - SocketClient (0.1.1):
+    - SocketRocket
+  - SocketRocket (0.3.1-beta2)
 
 DEPENDENCIES:
   - FlatUIKit
+  - SocketClient
 
 SPEC CHECKSUMS:
   FlatUIKit: 43b2acaa6f4ef57539b51b00e4ce62d506e33e11
+  SocketClient: ce32525bc8fe1c63460ec6348d43ef6674f4872c
+  SocketRocket: 7ac946bcce46287a791dfff3c1f8daa692821dae
 
 COCOAPODS: 0.24.0

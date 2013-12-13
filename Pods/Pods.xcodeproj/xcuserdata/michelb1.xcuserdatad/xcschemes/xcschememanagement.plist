@@ -9,6 +9,16 @@
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
+		<key>Pods-SocketClient.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Pods-SocketRocket.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
 		<key>Pods.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -22,12 +32,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>89867C25791C458DBE60868A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8F5ED58AA4F1460F805CEFAA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>9686DA6278A744A1970B0ED6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B3972E21A5D04A04B416A506</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFE8B4AF14A140DB81CB8210</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>DFE937E4A9C04D19920F5551</key>
 		<dict>
 			<key>primary</key>
 			<true/>

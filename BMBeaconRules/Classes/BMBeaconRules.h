@@ -14,6 +14,10 @@
 
 @interface BMBeaconRuleManager : NSObject
 
+/**
+ Determines whether or not iBeacon events should
+ be sent to rules.
+ */
 @property (assign) BOOL suspendRules;
 
 - (BOOL)addRule:(BMBeaconRule *)rule;
@@ -32,7 +36,7 @@ typedef void(^BMBeaconRuleCallback)(BMBeaconRule *rule, BOOL activated);
 /**
  The proximity in which the rule should be activated
  
- @see `-initWithRegion:andActivationProximity:`
+ @see -initWithRegion:activationProximity:andCallback:
  */
 @property (assign, readonly) CLProximity activationProximity;
 
@@ -45,8 +49,11 @@ typedef void(^BMBeaconRuleCallback)(BMBeaconRule *rule, BOOL activated);
  Whether or not the rule is activated.
  */
 
-//TODO: this should probably be kvo-able, or something similar
-//so that asychronous rules can join the fun.
+/**TODO: this should probably be kvo-able, or something similar
+ so that asychronous rules can join the fun. If you have a single
+ asychronous rule, you should be fine. This just become an issue when
+ using the composite rules.
+*/
 @property (assign, readonly) BOOL activated;
 
 /**
