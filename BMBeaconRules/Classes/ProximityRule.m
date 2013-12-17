@@ -9,6 +9,14 @@
 #import "ProximityRule.h"
 
 @implementation ProximityRule
+- (instancetype)initWithRegion:(CLBeaconRegion *)region activationProximity:(CLProximity)activationProximity andCallback:(BMBeaconRuleCallback)callback {
+    self = [super initWithRegion:region andCallback:callback];
+    if (self) {
+        _activationProximity = activationProximity;
+    }
+    return self;
+}
+
 - (void)didRangeWithBeacons:(NSArray *)beacons {
     [super didRangeWithBeacons:beacons];
     

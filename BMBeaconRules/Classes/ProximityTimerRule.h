@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Brian Michel. All rights reserved.
 //
 
-#import "BMBeaconRules.h"
+#import "ProximityRule.h"
 
-@interface ProximityTimerRule : BMBeaconRule
+@interface ProximityTimerRule : ProximityRule
 @property (copy) void (^countdownBlock)(NSTimeInterval);
 @end

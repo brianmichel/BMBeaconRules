@@ -34,13 +34,6 @@ typedef void(^BMBeaconRuleCallback)(BMBeaconRule *rule, BOOL activated);
 @property (strong, readonly) CLBeaconRegion *ruleRegion;
 
 /**
- The proximity in which the rule should be activated
- 
- @see -initWithRegion:activationProximity:andCallback:
- */
-@property (assign, readonly) CLProximity activationProximity;
-
-/**
  Callback to be called when activated/deactivated.
  */
 @property (copy) BMBeaconRuleCallback activationCallback;
@@ -60,14 +53,13 @@ typedef void(^BMBeaconRuleCallback)(BMBeaconRule *rule, BOOL activated);
  Default initializer
  
  @param region The region in which the rule should be active for.
- @param proximity The proximity in which the rule should activate for.
  @param callback The callback which will be called when the rule criteria has been met.
  
  @throws NSInvalidArgumentException if region is nil.
  
  @warning if promximity is passed as `CLProximityUnknown` range monitoring will be disabled.
  */
-- (instancetype)initWithRegion:(CLBeaconRegion *)region activationProximity:(CLProximity)proxmity andCallback:(BMBeaconRuleCallback)callback;
+- (instancetype)initWithRegion:(CLBeaconRegion *)region andCallback:(BMBeaconRuleCallback)callback;
 
 - (void)didEnterRegion; //will be called asynchronously on a private dispatch queue.
 - (void)didExitRegion;  //will be called asynchronously on a private dispatch queue.

@@ -140,14 +140,13 @@
 
 @implementation BMBeaconRule
 
-- (instancetype)initWithRegion:(CLBeaconRegion *)region activationProximity:(CLProximity)proxmity andCallback:(BMBeaconRuleCallback)callback {
+- (instancetype)initWithRegion:(CLBeaconRegion *)region andCallback:(BMBeaconRuleCallback)callback {
     self = [super init];
     if (self) {
         if (!region) {
             @throw [NSException exceptionWithName:NSInvalidArgumentException reason:@"A BMBeaconRule MUST have a region" userInfo:nil];
         }
         _ruleRegion = region;
-        _activationProximity = proxmity;
         self.activationCallback = callback;
     }
     return self;
@@ -162,9 +161,7 @@
 }
 
 - (void)didRangeWithBeacons:(NSArray *)beacons {
-    if (self.activationProximity == CLProximityUnknown) {
-        return;
-    }
+    //To be overridden in subclass
 }
 
 - (void)activateRule:(BOOL)activate {
@@ -186,8 +183,8 @@
 @end
 
 @implementation BMCompositeBeaconRule
-- (instancetype)initWithRegion:(CLBeaconRegion *)region activationProximity:(CLProximity)proxmity andCallback:(BMBeaconRuleCallback)callback {
-    self = [super initWithRegion:region activationProximity:proxmity andCallback:callback];
+- (instancetype)initWithRegion:(CLBeaconRegion *)region andCallback:(BMBeaconRuleCallback)callback {
+    self = [super initWithRegion:region andCallback:callback];
     if (self) {
         self.subRules = [NSMutableArray array];
     }

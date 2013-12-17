@@ -20,10 +20,8 @@
 		48093F3618526CB700F6DDAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48093F1518526CB700F6DDAD /* UIKit.framework */; };
 		48093F3E18526CB700F6DDAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48093F3C18526CB700F6DDAD /* InfoPlist.strings */; };
 		48093F4018526CB700F6DDAD /* BLETesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F3F18526CB700F6DDAD /* BLETesterTests.m */; };
-		48093F4C1853BB3B00F6DDAD /* MultiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F4B1853BB3B00F6DDAD /* MultiViewController.m */; };
 		48093F4F1853BB4800F6DDAD /* VotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F4E1853BB4800F6DDAD /* VotingViewController.m */; };
 		48093F521853BB6500F6DDAD /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F511853BB6500F6DDAD /* TimerViewController.m */; };
-		489CE19218542F9B00710D4D /* RemoteOccupancyRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 489CE19118542F9B00710D4D /* RemoteOccupancyRule.m */; };
 		48A703791853C1C20031D119 /* BMBeaconRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A703781853C1C20031D119 /* BMBeaconRules.m */; };
 		48A7037D1853DA390031D119 /* EnterExitRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A7037C1853DA390031D119 /* EnterExitRule.m */; };
 		48A703801853DCF60031D119 /* ProximityRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A7037F1853DCF60031D119 /* ProximityRule.m */; };
@@ -59,14 +57,10 @@
 		48093F3B18526CB700F6DDAD /* BeaconerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconerTests-Info.plist"; sourceTree = "<group>"; };
 		48093F3D18526CB700F6DDAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		48093F3F18526CB700F6DDAD /* BLETesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLETesterTests.m; sourceTree = "<group>"; };
-		48093F4A1853BB3B00F6DDAD /* MultiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MultiViewController.h; path = Classes/MultiViewController.h; sourceTree = "<group>"; };
-		48093F4B1853BB3B00F6DDAD /* MultiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MultiViewController.m; path = Classes/MultiViewController.m; sourceTree = "<group>"; };
 		48093F4D1853BB4800F6DDAD /* VotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VotingViewController.h; path = Classes/VotingViewController.h; sourceTree = "<group>"; };
 		48093F4E1853BB4800F6DDAD /* VotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VotingViewController.m; path = Classes/VotingViewController.m; sourceTree = "<group>"; };
 		48093F501853BB6500F6DDAD /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerViewController.h; path = Classes/TimerViewController.h; sourceTree = "<group>"; };
 		48093F511853BB6500F6DDAD /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerViewController.m; path = Classes/TimerViewController.m; sourceTree = "<group>"; };
-		489CE19018542F9B00710D4D /* RemoteOccupancyRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoteOccupancyRule.h; path = Classes/RemoteOccupancyRule.h; sourceTree = "<group>"; };
-		489CE19118542F9B00710D4D /* RemoteOccupancyRule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoteOccupancyRule.m; path = Classes/RemoteOccupancyRule.m; sourceTree = "<group>"; };
 		48A703771853C1C20031D119 /* BMBeaconRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMBeaconRules.h; path = Classes/BMBeaconRules.h; sourceTree = "<group>"; };
 		48A703781853C1C20031D119 /* BMBeaconRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMBeaconRules.m; path = Classes/BMBeaconRules.m; sourceTree = "<group>"; };
 		48A7037B1853DA390031D119 /* EnterExitRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EnterExitRule.h; path = Classes/EnterExitRule.h; sourceTree = "<group>"; };
@@ -184,8 +178,6 @@
 		48093F491853BB1800F6DDAD /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				48093F4A1853BB3B00F6DDAD /* MultiViewController.h */,
-				48093F4B1853BB3B00F6DDAD /* MultiViewController.m */,
 				48093F4D1853BB4800F6DDAD /* VotingViewController.h */,
 				48093F4E1853BB4800F6DDAD /* VotingViewController.m */,
 				48093F501853BB6500F6DDAD /* TimerViewController.h */,
@@ -205,8 +197,6 @@
 				48A7037F1853DCF60031D119 /* ProximityRule.m */,
 				48A703811853DE0F0031D119 /* ProximityTimerRule.h */,
 				48A703821853DE0F0031D119 /* ProximityTimerRule.m */,
-				489CE19018542F9B00710D4D /* RemoteOccupancyRule.h */,
-				489CE19118542F9B00710D4D /* RemoteOccupancyRule.m */,
 			);
 			name = BMBeaconRules;
 			sourceTree = "<group>";
@@ -348,10 +338,8 @@
 				48093F4F1853BB4800F6DDAD /* VotingViewController.m in Sources */,
 				48A7037D1853DA390031D119 /* EnterExitRule.m in Sources */,
 				48A703791853C1C20031D119 /* BMBeaconRules.m in Sources */,
-				489CE19218542F9B00710D4D /* RemoteOccupancyRule.m in Sources */,
 				48A703801853DCF60031D119 /* ProximityRule.m in Sources */,
 				48093F2218526CB700F6DDAD /* AppDelegate.m in Sources */,
-				48093F4C1853BB3B00F6DDAD /* MultiViewController.m in Sources */,
 				48093F1E18526CB700F6DDAD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

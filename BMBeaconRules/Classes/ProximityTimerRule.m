@@ -7,6 +7,7 @@
 //
 
 #import "ProximityTimerRule.h"
+#import "BMBeaconRules.h"
 
 @interface ProximityTimerRule ()
 @property (strong) NSTimer *timer;

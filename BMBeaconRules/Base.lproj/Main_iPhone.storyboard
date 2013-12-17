@@ -35,25 +35,6 @@
             </objects>
             <point key="canvasLocation" x="571" y="358"/>
         </scene>
-        <!--Multi View Controller - Multi-->
-        <scene sceneID="ZqZ-wJ-vPW">
-            <objects>
-                <viewController id="TVx-lk-3Id" customClass="MultiViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D2J-Mm-Ebi"/>
-                        <viewControllerLayoutGuide type="bottom" id="Jvv-qB-Xyf"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="KjM-c2-cWE">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Multi" image="users-normal" id="4xL-NJ-Nvj"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yqp-03-Lxx" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="571" y="1045"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wSO-hM-Uhn">
             <objects>
@@ -66,7 +47,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="UKz-7w-LVH" kind="relationship" relationship="viewControllers" id="EL2-6x-05Z"/>
-                        <segue destination="TVx-lk-3Id" kind="relationship" relationship="viewControllers" id="Icd-IS-JBR"/>
                         <segue destination="a9l-7X-ByN" kind="relationship" relationship="viewControllers" id="ZZ8-QY-ywW"/>
                     </connections>
                 </tabBarController>
@@ -123,7 +103,6 @@
     <resources>
         <image name="checkmark-normal" width="28" height="28"/>
         <image name="stopwatch-normal" width="26" height="28"/>
-        <image name="users-normal" width="28" height="25"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
