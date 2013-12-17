@@ -34,7 +34,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "48093F3118526CB700F6DDAD"
                BuildableName = "BeaconerTests.xctest"
-               BlueprintName = "BeaconerTests"
+               BlueprintName = "BMBeaconRulesTest"
                ReferencedContainer = "container:BMBeaconRules.xcodeproj">
             </BuildableReference>
          </TestableReference>

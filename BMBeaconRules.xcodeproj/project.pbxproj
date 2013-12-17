@@ -19,10 +19,10 @@
 		48093F3518526CB700F6DDAD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48093F1118526CB700F6DDAD /* Foundation.framework */; };
 		48093F3618526CB700F6DDAD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48093F1518526CB700F6DDAD /* UIKit.framework */; };
 		48093F3E18526CB700F6DDAD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 48093F3C18526CB700F6DDAD /* InfoPlist.strings */; };
-		48093F4018526CB700F6DDAD /* BLETesterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F3F18526CB700F6DDAD /* BLETesterTests.m */; };
 		48093F4F1853BB4800F6DDAD /* VotingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F4E1853BB4800F6DDAD /* VotingViewController.m */; };
 		48093F521853BB6500F6DDAD /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 48093F511853BB6500F6DDAD /* TimerViewController.m */; };
 		4825E303185FF75600300C7B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4825E302185FF75600300C7B /* BaseViewController.m */; };
+		489665C118600984008ADEA6 /* BMProximityRuleTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 489665C018600984008ADEA6 /* BMProximityRuleTest.m */; };
 		48A703791853C1C20031D119 /* BMBeaconRules.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A703781853C1C20031D119 /* BMBeaconRules.m */; };
 		48A7037D1853DA390031D119 /* BMEnterExitRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A7037C1853DA390031D119 /* BMEnterExitRule.m */; };
 		48A703801853DCF60031D119 /* BMProximityRule.m in Sources */ = {isa = PBXBuildFile; fileRef = 48A7037F1853DCF60031D119 /* BMProximityRule.m */; };
@@ -57,13 +57,13 @@
 		48093F3318526CB700F6DDAD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		48093F3B18526CB700F6DDAD /* BeaconerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BeaconerTests-Info.plist"; sourceTree = "<group>"; };
 		48093F3D18526CB700F6DDAD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		48093F3F18526CB700F6DDAD /* BLETesterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BLETesterTests.m; sourceTree = "<group>"; };
 		48093F4D1853BB4800F6DDAD /* VotingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VotingViewController.h; path = Classes/VotingViewController.h; sourceTree = "<group>"; };
 		48093F4E1853BB4800F6DDAD /* VotingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VotingViewController.m; path = Classes/VotingViewController.m; sourceTree = "<group>"; };
 		48093F501853BB6500F6DDAD /* TimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimerViewController.h; path = Classes/TimerViewController.h; sourceTree = "<group>"; };
 		48093F511853BB6500F6DDAD /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimerViewController.m; path = Classes/TimerViewController.m; sourceTree = "<group>"; };
 		4825E301185FF75600300C7B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BaseViewController.h; path = Classes/BaseViewController.h; sourceTree = "<group>"; };
 		4825E302185FF75600300C7B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BaseViewController.m; path = Classes/BaseViewController.m; sourceTree = "<group>"; };
+		489665C018600984008ADEA6 /* BMProximityRuleTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BMProximityRuleTest.m; sourceTree = "<group>"; };
 		48A703771853C1C20031D119 /* BMBeaconRules.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMBeaconRules.h; path = Classes/BMBeaconRules.h; sourceTree = "<group>"; };
 		48A703781853C1C20031D119 /* BMBeaconRules.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BMBeaconRules.m; path = Classes/BMBeaconRules.m; sourceTree = "<group>"; };
 		48A7037B1853DA390031D119 /* BMEnterExitRule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BMEnterExitRule.h; path = Classes/BMEnterExitRule.h; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 		48093F3918526CB700F6DDAD /* BeaconerTests */ = {
 			isa = PBXGroup;
 			children = (
-				48093F3F18526CB700F6DDAD /* BLETesterTests.m */,
 				48093F3A18526CB700F6DDAD /* Supporting Files */,
+				489665C018600984008ADEA6 /* BMProximityRuleTest.m */,
 			);
 			name = BeaconerTests;
 			path = BMBeaconRulesTests;
@@ -228,9 +228,9 @@
 			productReference = 48093F0E18526CB700F6DDAD /* BMBeaconRules.app */;
 			productType = "com.apple.product-type.application";
 		};
-		48093F3118526CB700F6DDAD /* BeaconerTests */ = {
+		48093F3118526CB700F6DDAD /* BMBeaconRulesTest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 48093F4618526CB700F6DDAD /* Build configuration list for PBXNativeTarget "BeaconerTests" */;
+			buildConfigurationList = 48093F4618526CB700F6DDAD /* Build configuration list for PBXNativeTarget "BMBeaconRulesTest" */;
 			buildPhases = (
 				48093F2E18526CB700F6DDAD /* Sources */,
 				48093F2F18526CB700F6DDAD /* Frameworks */,
@@ -241,7 +241,7 @@
 			dependencies = (
 				48093F3818526CB700F6DDAD /* PBXTargetDependency */,
 			);
-			name = BeaconerTests;
+			name = BMBeaconRulesTest;
 			productName = BLETesterTests;
 			productReference = 48093F3218526CB700F6DDAD /* BeaconerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -274,7 +274,7 @@
 			projectRoot = "";
 			targets = (
 				48093F0D18526CB700F6DDAD /* BMBeaconRules */,
-				48093F3118526CB700F6DDAD /* BeaconerTests */,
+				48093F3118526CB700F6DDAD /* BMBeaconRulesTest */,
 			);
 		};
 /* End PBXProject section */
@@ -354,7 +354,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				48093F4018526CB700F6DDAD /* BLETesterTests.m in Sources */,
+				489665C118600984008ADEA6 /* BMProximityRuleTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -563,7 +563,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		48093F4618526CB700F6DDAD /* Build configuration list for PBXNativeTarget "BeaconerTests" */ = {
+		48093F4618526CB700F6DDAD /* Build configuration list for PBXNativeTarget "BMBeaconRulesTest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				48093F4718526CB700F6DDAD /* Debug */,
