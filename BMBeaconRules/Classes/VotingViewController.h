@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface VotingViewController : UIViewController
+@interface VotingViewController : BaseViewController
 
 @end

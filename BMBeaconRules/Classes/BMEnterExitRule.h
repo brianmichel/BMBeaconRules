@@ -1,5 +1,5 @@
 //
-//  EnterExitRule.h
+//  BMEnterExitRule.h
 //  Beaconer
 //
 //  Created by Brian Michel on 12/7/13.
@@ -15,6 +15,6 @@
     It will also deactivate itself when a user has
  moved out of range of the region that the rule is associated with.
  */
-@interface EnterExitRule : BMBeaconRule
+@interface BMEnterExitRule : BMBeaconRule
 
 @end

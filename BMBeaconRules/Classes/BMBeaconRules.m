@@ -8,6 +8,12 @@
 
 #import "BMBeaconRules.h"
 
+NSString * const BMBeaconRuleManagerDidReceiveErrorNotification = @"BMBeaconRuleManagerDidReceiveErrorNotification";
+
+@interface BMBeaconRule ()
+@property (assign, readwrite) BOOL activated;
+@end
+
 @interface BMBeaconRuleManager () <CLLocationManagerDelegate>
 
 @end
@@ -26,7 +32,7 @@
         
         _rulesForRegionDictionary = [NSMutableDictionary dictionary];
         
-        _ruleBackgroundQueue = dispatch_queue_create("BluetoothRuleManager Background Queue", DISPATCH_QUEUE_CONCURRENT);
+        _ruleBackgroundQueue = dispatch_queue_create("BMBeaconRuleManager Background Queue", DISPATCH_QUEUE_CONCURRENT);
     }
     return self;
 }
@@ -111,6 +117,18 @@
     }
 }
 
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BMBeaconRuleManagerDidReceiveErrorNotification object:error];
+}
+
+- (void)locationManager:(CLLocationManager *)manager monitoringDidFailForRegion:(CLRegion *)region withError:(NSError *)error {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BMBeaconRuleManagerDidReceiveErrorNotification object:error];
+}
+
+- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error {
+    [[NSNotificationCenter defaultCenter] postNotificationName:BMBeaconRuleManagerDidReceiveErrorNotification object:error];
+}
+
 #pragma mark - Helpers
 - (void)notifyRegionEntryForRegion:(CLRegion *)region {
     if ([region isKindOfClass:[CLBeaconRegion class]]) {
@@ -165,13 +183,15 @@
 }
 
 - (void)activateRule:(BOOL)activate {
-    if (_activated == activate) {
+    if (self.activated == activate) {
         return;
     }
     
-    _activated = activate;
+    self.activated = activate;
     if (self.activationCallback) {
-        self.activationCallback(self, activate);
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.activationCallback(self, activate);
+        });
     }
 }
 @end

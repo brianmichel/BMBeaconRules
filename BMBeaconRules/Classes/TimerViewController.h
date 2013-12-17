@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface TimerViewController : UIViewController
+@interface TimerViewController : BaseViewController
 
 @end

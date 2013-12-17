@@ -1,46 +1,38 @@
 //
-//  EntranceTimerRule.m
+//  BMProximityTimerRule.m
 //  Beaconer
 //
 //  Created by Brian Michel on 12/7/13.
 //  Copyright (c) 2013 Brian Michel. All rights reserved.
 //
 
-#import "ProximityTimerRule.h"
+#import "BMProximityTimerRule.h"
 #import "BMBeaconRules.h"
 
-@interface ProximityTimerRule ()
+@interface BMProximityTimerRule ()
 @property (strong) NSTimer *timer;
 @property (assign) NSTimeInterval timeLimit;
 @property (assign) NSTimeInterval timeRemaining;
 @property (assign) CLProximity lastAverageProximity;
 @end
 
-@implementation ProximityTimerRule
+@implementation BMProximityTimerRule
 
-- (instancetype)initWithRegion:(CLBeaconRegion *)region activationProximity:(CLProximity)proxmity andCallback:(BMBeaconRuleCallback)callback {
+- (instancetype)initWithRegion:(CLBeaconRegion *)region activationProximity:(CLProximity)proxmity timeLimit:(NSTimeInterval)timeLimit andCallback:(BMBeaconRuleCallback)callback {
     self = [super initWithRegion:region activationProximity:proxmity andCallback:callback];
     if (self) {
-        self.timeLimit = self.timeRemaining = 5.0;
-        self.lastAverageProximity = CLProximityUnknown;
+        self.timeLimit = self.timeRemaining = timeLimit;
     }
     return self;
 }
 
-- (void)didRangeWithBeacons:(NSArray *)beacons {
-    [super didRangeWithBeacons:beacons];
-    
-    //get the average proximity of all beacons in the region
-    NSNumber *averageState = [beacons valueForKeyPath:@"@avg.proximity"];
-    CLProximity currentAverageProximity = [averageState integerValue];
-    if (self.lastAverageProximity != currentAverageProximity && self.activationProximity == currentAverageProximity) {
-        [self setupTimer];
-    } else if (self.activationProximity != currentAverageProximity) {
-        [self tearDownTimer];
-        [self activateRule:NO];
-    }
-    
-    self.lastAverageProximity = currentAverageProximity;
+- (void)didEnterProximity {
+    [self setupTimer];
+}
+
+- (void)didExitProximity {
+    [self tearDownTimer];
+    [self activateRule:NO];
 }
 
 - (void)setupTimer {
@@ -64,7 +56,6 @@
     if (self.timeRemaining <= 0) {
         [self activateRule:YES];
         [self tearDownTimer];
-        [self activateRule:NO];
     } else {
         if (self.countdownBlock) {
             self.countdownBlock(self.timeRemaining);
