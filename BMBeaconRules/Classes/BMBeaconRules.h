@@ -7,15 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
-
+#import <CoreLocation/CoreLocation.h>
 /**
  Notification posted when an error is encountered from the underlying
  CLLocationManager. The object on this notification will always be an NSError
  object, and SHOULD be in the kCLError domain.
  */
 extern NSString * const BMBeaconRuleManagerDidReceiveErrorNotification;
-
-@import CoreLocation;
 
 @class BMBeaconRule;
 
